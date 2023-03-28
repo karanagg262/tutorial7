@@ -22,11 +22,11 @@ router.get('/users', async (req, res) => {
 
 router.post('/add', (req, res) => {
     const input = req.body;
-    if(input.email && input.firstName){
+    if(input.email && input.firstname){
         id = crypto.randomBytes(4).toString("hex");
         const data = {
             "email" : input.email,
-            "firstname" : input.firstName,
+            "firstname" : input.firstname,
             "id" : id
         }
         console.log(data);
